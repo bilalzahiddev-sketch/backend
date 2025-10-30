@@ -29,9 +29,13 @@ app = FastAPI(title="Legal Petition Drafter API", version="1.0.0")
 
 # CORS
 frontend_origin = os.getenv("FRONTEND_ORIGIN", "http://localhost:3000")
+allowed_origins = [
+    frontend_origin,
+    "https://task1-frontend-one.vercel.app",
+]
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[frontend_origin],
+    allow_origins=allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
