@@ -1,18 +1,8 @@
-﻿# Python
-__pycache__/
-*.py[cod]
-*.egg-info/
-*.log
-
-# Virtual env
 venv/
-.env/
-.venv/
-
-# OS
+__pycache__/
+*.pyc
+.env
+.env.*
 .DS_Store
-Thumbs.db
-
-# IDE
-.vscode/
 .idea/
+.vscode/
