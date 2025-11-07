@@ -1984,7 +1984,12 @@ async def generate_petition_v1(
 ) -> JSONResponse:
     await ensure_services_ready()
 
-    petition_request = legacy_case_to_petition_request(case_data)
+    try:
+        petition_request = legacy_case_to_petition_request(case_data)
+    except HTTPException:
+        raise
+    except ValueError as exc:
+        raise HTTPException(status_code=400, detail=str(exc)) from exc
 
     try:
         petition = await ElitePetitionGenerator.generate_complete_petition(petition_request)
