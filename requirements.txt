@@ -16,7 +16,7 @@ PyPDF2==3.0.1
 
 # Data Processing
 python-dotenv==1.0.1
-pydantic==2.5.3
+pydantic==2.9.2
 pydantic-settings==2.1.0
 
 # HTTP & Async
