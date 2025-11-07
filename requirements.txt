@@ -1,12 +1,45 @@
-fastapi==0.115.2
-uvicorn[standard]==0.30.6
-pydantic==2.9.2
+# requirements.txt - Python Dependencies
+
+# Core Framework
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.6
+
+# AI & ML
+openai==1.12.0
+pinecone-client==3.0.3
+tiktoken==0.5.2
+
+# PDF Generation
+weasyprint==60.2
+PyPDF2==3.0.1
+
+# Data Processing
 python-dotenv==1.0.1
-openai==1.52.2
-pinecone-client==5.0.1
-firebase-admin==6.6.0
-httpx<0.28
-pypdf==5.0.1
-tenacity==8.5.0
+pydantic==2.5.3
+pydantic-settings==2.1.0
+
+# HTTP & Async
+httpx==0.26.0
+aiofiles==23.2.1
+
+# Database (Optional - for production)
+sqlalchemy==2.0.25
+psycopg2-binary==2.9.9
+
+# Monitoring & Logging
 python-json-logger==2.0.7
 
+# Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+
+# Testing
+pytest==7.4.4
+pytest-asyncio==0.23.3
+httpx==0.26.0
+
+# Additional utilities
+python-dateutil==2.8.2
+pytz==2023.3
